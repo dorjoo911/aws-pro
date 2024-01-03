@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
@@ -10,21 +10,15 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "Team Leader"];
+
+  const toRotate = useMemo(
+    () => ["Web Developer", "Web Designer", "Team Leader"],
+    []
+  );
+
   const period = 2000;
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
-
-  const tick = () => {
+  const tick = useCallback(() => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting
@@ -39,17 +33,24 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
+      setLoopNum(loopNum + 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(500);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
     }
-  };
+  }, [loopNum, isDeleting, text, toRotate]); // Include 'toRotate' in the dependency array
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text, delta, tick]);
 
   return (
     <section className="banner" id="home">
@@ -69,20 +70,25 @@ export const Banner = () => {
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "Team Leder" ]'
+                      data-rotate='[ "Web Developer", "Web Designer", "Node.js Full stack developer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    My fullname is Mike Erdene. I'm 35 years old. I study MSD at
-                    MIU. I am a web developer. I can make the website more, more
-                    interactive with web animation I study at Full-Stack
-                    developer. When I first came to web brain, I had no
-                    knowledge of programming. But now with the help of strong
-                    aspirations and teachers, my level of knowledge has greatly
-                    increased and I can freely create web site views that are
-                    used in our daily lives
+                    I am Mike Erdene, a seasoned web developer specializing in
+                    the creation of highly interactive websites using the
+                    MERN/MEAN stack. My professional journey includes the
+                    achievement of a master's degree in JavaScript Full-Stack
+                    development at MIU, marking a profound transformation from
+                    my early days as an individual contractor with no prior
+                    programming knowledge. With unwavering determination and the
+                    invaluable support of my talented colleagues, I have rapidly
+                    expanded my expertise. Today, I effortlessly craft web
+                    experiences that seamlessly integrate into our daily lives,
+                    driven by a relentless commitment to excellence and a
+                    passion for innovation in the ever-evolving field of web
+                    development.
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
