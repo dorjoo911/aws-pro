@@ -40,7 +40,7 @@ export const Banner = () => {
       setLoopNum(loopNum + 1);
       setDelta(500);
     }
-  }, [loopNum, isDeleting, text, toRotate]); // Include 'toRotate' in the dependency array
+  }, [loopNum, isDeleting, text, toRotate]);
 
   useEffect(() => {
     let ticker = setInterval(() => {

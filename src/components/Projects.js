@@ -11,10 +11,10 @@ import projImg8 from "../assets/img/QA UI.png";
 import projImg9 from "../assets/img/QA API.png";
 import projImg10 from "../assets/img/robots.png";
 import projImg11 from "../assets/img/Emerson APP.png";
-import projImg12 from "../assets/img/mike.png";
-// import projImg13 from "../assets/img/mike.png";
-// import projImg14 from "../assets/img/mike.png";
-// import projImg15 from "../assets/img/mike.png";
+import projImg12 from "../assets/img/UHO.png";
+import projImg13 from "../assets/img/math4jem.png";
+import projImg14 from "../assets/img/Flash-card.png";
+import projImg15 from "../assets/img/mike.png";
 // import projImg16 from "../assets/img/mike.png";
 // import projImg17 from "../assets/img/mike.png";
 // import projImg18 from "../assets/img/mike.png";
@@ -26,17 +26,17 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const projects = [
     {
-      description: "WMC Web project",
-      imgUrl: projImg1,
-      viewLink: "https://wmc-web.vercel.app/",
+      description: "Math tutorial MERN, GCP, Netlify",
+      imgUrl: projImg13,
+      viewLink: "https://iridescent-zuccutto-f1c5a6.netlify.app/",
     },
     {
-      description: "React project for full content",
+      description: "React mastering project for learning",
       imgUrl: projImg2,
       viewLink: "https://test-3d6a9.firebaseapp.com",
     },
     {
-      description: "JavaSript game project",
+      description: "Vanilla JavaSript game project",
       imgUrl: projImg3,
       viewLink: "https://dorjoo911.github.io/diceGame/",
     },
@@ -46,9 +46,9 @@ export const Projects = () => {
       viewLink: "https://dorjoo911.github.io/familyBudgetCalculator/",
     },
     {
-      description: "Small tasks and assignments",
-      imgUrl: projImg5,
-      viewLink: "https://dorjoo911.github.io/webDevCS315/",
+      description: "Math Flash cards",
+      imgUrl: projImg14,
+      viewLink: "https://effervescent-pastelito-bd717d.netlify.app/",
     },
     {
       description: "QA automation frameworks",
@@ -73,9 +73,10 @@ export const Projects = () => {
       viewLink: "https://www.youtube.com/watch?v=JW_t9Xf0L6A",
     },
     {
-      description: "React small task",
-      imgUrl: projImg10,
-      viewLink: "https://codesandbox.io/s/github/dorjoo911/searchRobots",
+      description: "A Church site project",
+      imgUrl: projImg1,
+      viewLink: "https://wmc-web.vercel.app/",
+      //
     },
     {
       description: "Emeron weather API task",
@@ -84,9 +85,27 @@ export const Projects = () => {
         "https://emerson-current-weather-by-city-zip-coord.s3.amazonaws.com/index.html",
     },
     {
-      description: "New Project 2 for Tab 2",
-      imgUrl: projImg12, // Add the image URL for the new project
-      viewLink: "https://example.com/project8", // Add the view link for the new project
+      description: "UHO Task",
+      imgUrl: projImg12,
+      viewLink: "https://relaxed-frangipane-fbb37d.netlify.app/",
+    },
+  ];
+  const projectsTab3 = [
+    {
+      description: "Web dev fundmental learning tasks",
+      imgUrl: projImg5,
+      viewLink: "https://dorjoo911.github.io/webDevCS315/",
+    },
+    {
+      description: "Basic React development",
+      imgUrl: projImg10,
+      viewLink: "https://codesandbox.io/s/github/dorjoo911/searchRobots",
+    },
+
+    {
+      description: "Project sample will be here ...",
+      imgUrl: projImg15, // Add the image URL for the new project
+      viewLink: "https://relaxed-frangipane-fbb37d.netlify.app/", // Add the view link for the new project
     },
   ];
 
@@ -150,13 +169,17 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <Row>
+                          {projectsTab3.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                viewLink={project.viewLink}
+                              />
+                            );
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
