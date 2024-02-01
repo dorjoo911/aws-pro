@@ -14,8 +14,8 @@ export const Newsletter = ({ status, message, onValidated }) => {
         <Row>
           <Col lg={12} md={6} xl={5}>
             <h3>
-              Get my latest resume to learn more about my qualifications andgit
-              push --set-upstream origin main experience.
+              Get my latest resume to learn more about my qualifications and my
+              contributions to cutting-edge Full-Stack Development.
             </h3>
           </Col>
           <Col md={6} xl={7}>
