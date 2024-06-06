@@ -1,12 +1,6 @@
 import { Col, Row } from "react-bootstrap";
-export const Newsletter = ({ status, message, onValidated }) => {
-  const downloadResume = () => {
-    const resumeUrl = "../assets/resume/Munkh MIU.pdf"; // URL to the PDF resume
-    const anchor = document.createElement("a");
-    anchor.href = resumeUrl;
-    anchor.download = "Munkh MIU.pdf";
-    anchor.click();
-  };
+export const Newsletter = () => {
+
 
   return (
     <Col lg={12}>
@@ -14,17 +8,18 @@ export const Newsletter = ({ status, message, onValidated }) => {
         <Row>
           <Col lg={12} md={6} xl={5}>
             <h3>
-              Get my latest resume to learn more about my qualifications and my
-              contributions to cutting-edge Full-Stack Development.
+              DOWNLOAD MY LATEST RESUME.
             </h3>
           </Col>
           <Col md={6} xl={7}>
-            <form onClick={downloadResume}>
+            
               <div className="new-email-bx">
-                <input type="email" placeholder="Munkh MIU.pdf" />
+                <input type="email" placeholder="Munkh-Resume.pdf" />
+                <a href="/Munkh_Byte2.pdf" download> 
                 <button type="submit">Download</button>
+                </a>
               </div>
-            </form>
+            
           </Col>
         </Row>
       </div>
