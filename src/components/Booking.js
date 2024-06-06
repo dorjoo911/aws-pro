@@ -9,6 +9,7 @@ const Booking = () => {
         height="700" 
         frameBorder="0"
         scrolling="no"
+        title='Booking Schedule'
       ></iframe>
     </div>
   );
