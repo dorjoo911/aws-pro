@@ -29,7 +29,12 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    emailjs.sendForm('service_utuye27', 'template_y3jvr47', form.current, 'AxvpqtwC9yYGIbxyA')
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_EMAILJS_USER_ID
+    )
       .then((result) => {
         setButtonText("Send");
         setFormDetails(formInitialDetails);

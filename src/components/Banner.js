@@ -12,7 +12,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
   const toRotate = useMemo(
-    () => ["Web Developer", "Web Designer", "Team Leader"],
+    () => ["Web Developer", "Web Designer", "Node.js Full Stack Developer"],
     []
   );
 
@@ -90,9 +90,11 @@ export const Banner = () => {
                     passion for innovation in the ever-evolving field of web
                     development.
                   </p>
+                  <a href="/#connect">
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>

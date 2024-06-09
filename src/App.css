@@ -636,3 +636,49 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+/* General styles for the video container */
+.videoContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black; /* Background color to fill empty space */
+}
+
+.videoContainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the container */
+}
+
+/* Desktop-specific styles */
+@media (min-width: 1024px) {
+  .videoContainer {
+    background-size: cover; /* Ensures background covers the container */
+    background-position: center; /* Centers the background */
+  }
+
+  .videoContainer video {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Tablet and mobile-specific styles */
+@media (max-width: 1024px) {
+  .videoContainer {
+    background-size: cover; /* Ensures background covers the container */
+    background-position: center; /* Centers the background */
+  }
+
+  .videoContainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the container */
+  }
+}
