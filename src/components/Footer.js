@@ -4,7 +4,6 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { Newsletter } from "./Newsletter";
-import Booking from "./Booking";
 
 export const Footer = () => {
   return (
@@ -12,7 +11,7 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <Newsletter />
-          <Booking/>
+          
           <Col size={12} sm={6}>
             <img src={logo} alt="Logo" style={{ borderRadius: "10%" }} />
           </Col>

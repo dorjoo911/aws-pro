@@ -6,6 +6,7 @@ import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
+import Booking from "./components/Booking";
 import { Footer } from "./components/Footer";
 import media from "./assets/img/welcome.mp4";
 
@@ -33,6 +34,7 @@ function App() {
           <Banner />
           <Skills />
           <Projects />
+          <Booking/>
           <Contact />
           <Footer />
         </div>

@@ -12,7 +12,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
   const toRotate = useMemo(
-    () => ["Web Developer", "Web Designer", "Node.js Full Stack Developer"],
+    () => ["Web Developer", "CRM ERP", "Full Stack"],
     []
   );
 
@@ -64,23 +64,23 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">Welcome to My Universe!</span>
                   <h1>
                     {`Hi! I'm Mike`}{" "}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "Node.js Full stack developer" ]'
+                      data-rotate='[ "Web Developer", "Web Designer", "Node Full stack developer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <p>
+                  <p style={{color: "skyblue", textShadow: "1px 1px 1px blue"}}>
                     I am Mike Erdene, a seasoned Web developer specializing in
                     the creation of highly interactive websites using the
                     MERN/MEAN stack. My professional journey includes the
-                    achievement of a <strong style={{color: "skyblue"}}>Master's degree in CS, JavaScript Full-Stack
-                    development</strong> at MIU Fairfield Iowa, marking a profound transformation from
+                    achievement of a <strong style={{color: "white"}}>Master's degree in CS, JavaScript Full-Stack
+                    developer</strong> at MIU Fairfield Iowa, marking a profound transformation from
                     my early days as an individual contractor with no prior
                     programming knowledge. With unwavering determination and the
                     invaluable support of my talented colleagues, I have rapidly

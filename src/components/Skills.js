@@ -33,9 +33,14 @@ export const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>About Skills</h2>
-              <p>
-                I have learned different programming languages so far and as far
-                as my skills are concerned<br></br>
+              <p style={{color: "skyblue", textShadow: "1px 1px 1px blue"}}>
+              
+JavaScript TypeScript Java HTML CSS Bootstrap SAAS PostCSS Tailwind SQL NoSQL
+Express Node REST GraphQL Apollo Next Angular React React Native NPM NVM Webpack Git
+Mocha Jest TestNG Selenium Cucumber Postman Adobe Google AWS Netlify Vercel
+Windows Mac Linux Docker Kubernetes Agile JIRA Swagger Sentry Slack VSCode IntelliJ Eclipse
+                
+                <br></br>
               </p>
               <Carousel
                 responsive={responsive}
@@ -44,20 +49,17 @@ export const Skills = () => {
               >
                 <div className="item">
                   <img src={meter1} alt="Image1" />
-                  <h5>Traditional Development</h5>
+                  <h5>Frontend Development</h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="Image2" />
-                  <h5>Personal Development</h5>
+                  <h5>Backend Development</h5>
                 </div>
                 <div className="item">
                   <img src={meter3} alt="Image3" />
                   <h5>Full-Stack Development</h5>
                 </div>
-                <div className="item">
-                  <img src={meter1} alt="Image4" />
-                  <h5>Cloud Development</h5>
-                </div>
+                
               </Carousel>
             </div>
           </div>

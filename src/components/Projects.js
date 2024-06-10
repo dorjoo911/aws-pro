@@ -1,11 +1,16 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import homeDesignCRM from "../assets/img/homedesign.png";
+import cabinetAll from "../assets/img/cabinetall-CRM.png";
+import shopCabinetAll from "../assets/img/shoppify-CA.png";
+import nailSalonCRM from "../assets/img/nailsalon-CRM.png";
+import wordJenko from "../assets/img/wordpress-jenko.png";
 import projImg1 from "../assets/img/belief.png";
 import projImg2 from "../assets/img/burger-app.png";
 import projImg3 from "../assets/img/dice.png";
 import projImg4 from "../assets/img/finance.png";
 import projImg5 from "../assets/img/small tasks.png";
-import projImg6 from "../assets/img/QA test.png";
+import projImg6 from "../assets/img/syntech-cloud.png";
 import projImg7 from "../assets/img/TAB2 pro1.png";
 import projImg8 from "../assets/img/QA UI.png";
 import projImg9 from "../assets/img/QA API.png";
@@ -15,54 +20,108 @@ import projImg12 from "../assets/img/UHO.png";
 import projImg13 from "../assets/img/math4jem.png";
 import projImg14 from "../assets/img/Flash-card.png";
 import projImg15 from "../assets/img/mike.png";
-// import projImg16 from "../assets/img/mike.png";
-// import projImg17 from "../assets/img/mike.png";
-// import projImg18 from "../assets/img/mike.png";
-
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-  const projects = [
+  const projectsTab1 = [
     {
-      description: "Math tutorial MERN, GCP, Netlify",
-      imgUrl: projImg13,
-      viewLink: "https://iridescent-zuccutto-f1c5a6.netlify.app/",
+      description: "Home Design INC CRM project",
+      imgUrl: homeDesignCRM,
+      viewLink: "https://system.homedesigndc.com/",
     },
     {
-      description: "React mastering project for learning",
-      imgUrl: projImg2,
-      viewLink: "https://test-3d6a9.firebaseapp.com",
+      description: "CabinetAll LLC WordPress site",
+      imgUrl: cabinetAll,
+      viewLink: "https://www.cabinetall.com/",
     },
     {
-      description: "Vanilla JavaSript game project",
-      imgUrl: projImg3,
-      viewLink: "https://dorjoo911.github.io/diceGame/",
+      description: "CabinetAll Shopify store integrate with CabinetAll's CRM",
+      imgUrl: shopCabinetAll,
+      viewLink: "https://www.cabinetall.com/cabinets.html",
     },
     {
-      description: "ES5 vs ES6 JS finance project",
-      imgUrl: projImg4,
-      viewLink: "https://dorjoo911.github.io/familyBudgetCalculator/",
-    },
-    {
-      description: "Math Flash cards",
-      imgUrl: projImg14,
-      viewLink: "https://effervescent-pastelito-bd717d.netlify.app/",
-    },
-    {
-      description: "QA automation frameworks",
+      description: "SynTech.cloud LLC Small Business CRM services",
       imgUrl: projImg6,
-      viewLink: "https://dorjoo911.github.io/myWebPage/",
+      viewLink: "https://syntech.cloud/",
     },
-  ];
-  const projectsTab2 = [
     {
-      description: "Public add WebSite Irlee.info",
+      description: "Jenko MGL LLC WordPress",
+      imgUrl: wordJenko,
+      viewLink: "https://free85837.wordpress.com/",
+    },
+    {
+      description: "A Client Nail salon's CRM project",
+      imgUrl: nailSalonCRM,
+      viewLink: "https://syntech.cloud/our-services",
+    },
+    {
+      description: "Irlee.info post ads",
       imgUrl: projImg7,
       viewLink: "https://irlee.info/",
     },
     {
+      description: "A Church website project React, Google RTDB and Auth, Netlify",
+      imgUrl: projImg1,
+      viewLink: "https://washingtonmongolchurch.netlify.app/",
+    },
+    {
+      description: "Your sample project will be post here ...",
+      imgUrl: projImg15,
+      viewLink: "#",
+    },
+  ];
+  const projectsTab2 = [
+    {
+      description: "Math tutorial internal app MERN, GCP",
+      imgUrl: projImg13,
+      viewLink: "https://iridescent-zuccutto-f1c5a6.netlify.app/",
+    },
+    {
+      description: "University of Houston College of Optometry Task",
+      imgUrl: projImg12,
+      viewLink: "https://relaxed-frangipane-fbb37d.netlify.app/",
+    },
+    {
+      description: "React mastering dummy project",
+      imgUrl: projImg2,
+      viewLink: "https://test-3d6a9.firebaseapp.com",
+    },
+    {
+      description: "Vanilla JavaSript 'Dice roll' task project",
+      imgUrl: projImg3,
+      viewLink: "https://dorjoo911.github.io/diceGame/",
+    },
+    {
+      description: "ECMA script 'Finance management' dummy project",
+      imgUrl: projImg4,
+      viewLink: "https://dorjoo911.github.io/familyBudgetCalculator/",
+    },
+    {
+      description: "Emerson Sensi weather API task",
+      imgUrl: projImg11,
+      viewLink: "https://emerson-current-weather-by-city-zip-coord.s3.amazonaws.com/index.html",
+    },
+  ];
+  const projectsTab3 = [
+    {
+      description: "Learning Web dev fundamentals",
+      imgUrl: projImg5,
+      viewLink: "https://dorjoo911.github.io/webDevCS315/",
+    },
+    {
+      description: "React Basic development",
+      imgUrl: projImg10,
+      viewLink: "https://codesandbox.io/s/github/dorjoo911/searchRobots",
+    },
+    {
+      description: "Math Flash cards task",
+      imgUrl: projImg14,
+      viewLink: "https://effervescent-pastelito-bd717d.netlify.app/",
+    },
+    
+{
       description: "QA automation, Selemium Java Test framework for UI",
       imgUrl: projImg8,
       viewLink: "https://www.youtube.com/watch?v=4CrEnwZJ6vA&t=2s",
@@ -73,39 +132,9 @@ export const Projects = () => {
       viewLink: "https://www.youtube.com/watch?v=JW_t9Xf0L6A",
     },
     {
-      description: "A Church site project",
-      imgUrl: projImg1,
-      viewLink: "https://wmc-web.vercel.app/",
-      //
-    },
-    {
-      description: "Emeron weather API task",
-      imgUrl: projImg11,
-      viewLink:
-        "https://emerson-current-weather-by-city-zip-coord.s3.amazonaws.com/index.html",
-    },
-    {
-      description: "UHO Task",
-      imgUrl: projImg12,
-      viewLink: "https://relaxed-frangipane-fbb37d.netlify.app/",
-    },
-  ];
-  const projectsTab3 = [
-    {
-      description: "Web dev fundmental learning tasks",
-      imgUrl: projImg5,
-      viewLink: "https://dorjoo911.github.io/webDevCS315/",
-    },
-    {
-      description: "Basic React development",
-      imgUrl: projImg10,
-      viewLink: "https://codesandbox.io/s/github/dorjoo911/searchRobots",
-    },
-
-    {
-      description: "Project sample will be here ...",
-      imgUrl: projImg15, // Add the image URL for the new project
-      viewLink: "https://relaxed-frangipane-fbb37d.netlify.app/", // Add the view link for the new project
+      description: "Your sample project will post here ...",
+      imgUrl: projImg15,
+      viewLink: "#",
     },
   ];
 
@@ -122,7 +151,7 @@ export const Projects = () => {
                   }
                 >
                   <h2>Projects</h2>
-                  <p>
+                  <p style={{color: "skyblue", textShadow: "1px 1px 1px blue"}}>
                     I'm excited to showcase some of my ongoing web projects,
                     course assignments, and sample developments to the public.
                   </p>
@@ -133,13 +162,13 @@ export const Projects = () => {
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first">Projects</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">Tasks</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">Fun</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -150,7 +179,7 @@ export const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {projects.map((project, index) => {
+                          {projectsTab1.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>

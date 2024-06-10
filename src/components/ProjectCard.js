@@ -12,7 +12,7 @@ export const ProjectCard = ({ title, description, imgUrl, viewLink }) => {
         />
         <div className="proj-txtx">
           <h4>{title}</h4>
-          <span>
+          <span style={{color: "skyblue", textShadow: "1px 1px 1px blue"}}>
             {description} <a href={viewLink}>view</a>
           </span>
         </div>
