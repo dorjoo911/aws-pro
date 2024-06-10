@@ -5,6 +5,7 @@ import cabinetAll from "../assets/img/cabinetall-CRM.png";
 import shopCabinetAll from "../assets/img/shoppify-CA.png";
 import nailSalonCRM from "../assets/img/nailsalon-CRM.png";
 import wordJenko from "../assets/img/wordpress-jenko.png";
+import syntechDemo from "../assets/img/syntechDemo.png";
 import projImg1 from "../assets/img/belief.png";
 import projImg2 from "../assets/img/burger-app.png";
 import projImg3 from "../assets/img/dice.png";
@@ -67,16 +68,16 @@ export const Projects = () => {
       viewLink: "https://washingtonmongolchurch.netlify.app/",
     },
     {
-      description: "Your sample project will be post here ...",
-      imgUrl: projImg15,
-      viewLink: "#",
+      description: "Syntech Demo sample CRM pre",
+      imgUrl: syntechDemo,
+      viewLink: "https://syntechdemo.netlify.app",
     },
   ];
   const projectsTab2 = [
     {
       description: "Math tutorial internal app MERN, GCP",
       imgUrl: projImg13,
-      viewLink: "https://iridescent-zuccutto-f1c5a6.netlify.app/",
+      viewLink: "https://math4fun.netlify.app",
     },
     {
       description: "University of Houston College of Optometry Task",
@@ -118,7 +119,7 @@ export const Projects = () => {
     {
       description: "Math Flash cards task",
       imgUrl: projImg14,
-      viewLink: "https://effervescent-pastelito-bd717d.netlify.app/",
+      viewLink: "https://flash4math.netlify.app",
     },
     
 {
