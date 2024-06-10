@@ -14,18 +14,22 @@ function App() {
   const [showVideo, setShowVideo] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const hasWatched = localStorage.getItem('hasWatched');
+    if (hasWatched) {
       setShowVideo(false);
-    }, 6000);
-
-    return () => clearTimeout(timer);
+    }
   }, []);
+
+  const handleVideoEnd = () => {
+    setShowVideo(false);
+    localStorage.setItem('hasWatched', 'true');
+  };
 
   return (
     <div className="App">
       {showVideo && (
         <div className="videoContainer">
-          <video src={media} autoPlay muted />
+          <video src={media} autoPlay muted onEnded={handleVideoEnd} />
         </div>
       )}
       {!showVideo && (
