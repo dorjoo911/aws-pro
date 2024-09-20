@@ -6,6 +6,7 @@ import shopCabinetAll from "../assets/img/shoppify-CA.png";
 import nailSalonCRM from "../assets/img/nailsalon-CRM.png";
 import wordJenko from "../assets/img/wordpress-jenko.png";
 import syntechDemo from "../assets/img/syntechDemo.png";
+import jenkoCRM from "../assets/img/Jenko CRM.png"
 import projImg1 from "../assets/img/belief.png";
 import projImg2 from "../assets/img/burger-app.png";
 import projImg3 from "../assets/img/dice.png";
@@ -27,6 +28,11 @@ import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projectsTab1 = [
+    {
+      description: "Jenko MGL Granite Web CRM project",
+      imgUrl: jenkoCRM,
+      viewLink: "https://jenkomglgranite.com/",
+    },
     {
       description: "Home Design INC CRM project",
       imgUrl: homeDesignCRM,
