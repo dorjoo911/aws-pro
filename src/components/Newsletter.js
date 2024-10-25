@@ -14,8 +14,8 @@ export const Newsletter = () => {
           <Col md={6} xl={7}>
             
               <div className="new-email-bx">
-                <input type="email" placeholder="Munkh-Resume.pdf" />
-                <a href="/Munkh_Byte2.pdf" download> 
+                <input type="email" placeholder="Resume.pdf" />
+                <a href="/ERDENE.pdf" download> 
                 <button type="submit">Download</button>
                 </a>
               </div>
