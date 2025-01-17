@@ -23,11 +23,17 @@ import projImg13 from "../assets/img/math4jem.png";
 import projImg14 from "../assets/img/Flash-card.png";
 import projImg15 from "../assets/img/mike.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import mkitchen from "../assets/img/mkitchen.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projectsTab1 = [
+    {
+      description: "Modern Kitchen Remodeling Web site",
+      imgUrl: mkitchen,
+      viewLink: "https://mkitchenremodel.com/",
+    },
     {
       description: "Jenko MGL Granite Web CRM project",
       imgUrl: jenkoCRM,
