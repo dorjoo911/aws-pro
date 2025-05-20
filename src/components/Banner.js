@@ -80,7 +80,7 @@ export const Banner = () => {
                     the creation of highly interactive websites using the
                     MERN/MEAN stack. My professional journey includes the
                     achievement of a <strong style={{color: "white"}}>Master's degree in CS, JavaScript Full-Stack
-                    developer</strong> at MIU Fairfield Iowa, marking a profound transformation from
+                    developer</strong> at MIU, Fairfield Iowa, marking a profound transformation from
                     my early days as an individual contractor with no prior
                     programming knowledge. With unwavering determination and the
                     invaluable support of my talented colleagues, I have rapidly
