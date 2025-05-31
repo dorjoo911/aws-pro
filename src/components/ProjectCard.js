@@ -20,3 +20,4 @@ export const ProjectCard = ({ title, description, imgUrl, viewLink }) => {
     </Col>
   );
 };
+

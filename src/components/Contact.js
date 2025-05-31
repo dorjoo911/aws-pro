@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -13,6 +13,7 @@ export const Contact = () => {
     phone: "",
     message: "",
   };
+
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
@@ -29,20 +30,28 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      form.current,
-      process.env.REACT_APP_EMAILJS_USER_ID
-    )
-      .then((result) => {
-        setButtonText("Send");
-        setFormDetails(formInitialDetails);
-        setStatus({ success: true, message: "Message sent successfully!" });
-      }, (error) => {
-        setButtonText("Send");
-        setStatus({ success: false, message: "Something went wrong, please try again later." });
-      });
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (result) => {
+          setButtonText("Send");
+          setFormDetails(formInitialDetails);
+          setStatus({ success: true, message: "Message sent successfully!" });
+        },
+        (error) => {
+          console.error("❌ Email error:", error.text);
+          setButtonText("Send");
+          setStatus({
+            success: false,
+            message: "Something went wrong, please try again later.",
+          });
+        }
+      );
   };
 
   return (

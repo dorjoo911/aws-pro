@@ -15,7 +15,7 @@ export const Newsletter = () => {
             
               <div className="new-email-bx">
                 <input type="email" placeholder="Resume.pdf" />
-                <a href="/ERDENE.pdf" download> 
+                <a href="/Mike.pdf" download> 
                 <button type="submit">Download</button>
                 </a>
               </div>
